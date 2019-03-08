@@ -103,6 +103,30 @@ class DatasetCatalog(object):
         "cityscapes_fine_instanceonly_seg_test_cocostyle": {
             "img_dir": "cityscapes/images",
             "ann_file": "cityscapes/annotations/instancesonly_filtered_gtFine_test.json"
+        },
+        "flc_train_positive_instances": {
+            "img_dir": "flc/trainval/images",
+            "ann_file": "flc/trainval/coco_annotations/instances_trainval_pos.json"
+        },
+        "flc_test_positive_instances": {
+            "img_dir": "flc/test/images",
+            "ann_file": "flc/test/coco_annotations/instances_test_pos.json"
+        },
+        "flc_test_negatives_instances": {
+            "img_dir": "flc/test/images",
+            "ann_file": "flc/test/coco_annotations/instances_test_negs.json"
+        },
+        "flc_train_positive_leaves": {
+            "img_dir": "flc/trainval/images",
+            "ann_file": "flc/trainval/coco_annotations/leaves_trainval_pos.json"
+        },
+        "flc_test_positive_leaves": {
+            "img_dir": "flc/test/images",
+            "ann_file": "flc/test/coco_annotations/leaves_test_pos.json"
+        },
+        "flc_test_negatives_leaves": {
+            "img_dir": "flc/test/images",
+            "ann_file": "flc/test/coco_annotations/leaves_test_negs.json"
         }
     }
 
