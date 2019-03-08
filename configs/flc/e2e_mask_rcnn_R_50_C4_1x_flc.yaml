@@ -9,8 +9,8 @@ MODEL:
     SHARE_BOX_FEATURE_EXTRACTOR: True
   MASK_ON: True
 DATASETS:
-  TRAIN: ("flc_train_positive_instances_coco_style",)
-  TEST: ("flc_test_positive_instances_coco_style",)
+  TRAIN: ("flc_train_positive_instances_cocostyle",)
+  TEST: ("flc_test_positive_instances_cocostyle",)
 SOLVER:
   BASE_LR: 0.01
   WEIGHT_DECAY: 0.0001
