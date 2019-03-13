@@ -30,8 +30,8 @@ MODEL:
     SHARE_BOX_FEATURE_EXTRACTOR: False
   MASK_ON: True
 DATASETS:
-  TRAIN: ("flc_train_positive_instances_cocostyle",)
-  TEST: ("flc_test_positive_instances_cocostyle","flc_train_positive_instances_cocostyle")
+  TRAIN: ("flc_trainval_hards_leaves_cocostyle",)
+  TEST: ("flc_test_positive_leaves_cocostyle",)
 DATALOADER:
   SIZE_DIVISIBILITY: 32
 SOLVER:
@@ -40,4 +40,4 @@ SOLVER:
   STEPS: (60000, 80000)
   MAX_ITER: 90000
   IMS_PER_BATCH: 3
-OUTPUT_DIR: "output/flc_instances"
+OUTPUT_DIR: "output/flc_leaves"

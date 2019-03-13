@@ -34,11 +34,11 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
                 new_anns['annotations'].append(fp)
 
     new_anns['categories'].append({'id':2, 'name': 'Three Leaf Clover', 'supercategory': 'Clover'})
-    with open(osp.join(output, 'instances_test_hard_negatives.json')) as f:
+    with open(output) as f:
         json.dump(new_anns, f)
 if __name__ == "__main__":
     ann_file = 'examples/instances_test_pos.json'
     pred_file = 'examples/segm.json'
-    output = 'examples/'
+    output = 'examples/instances_test_hard_negatives.json'
     pred2hard(ann_file, pred_file, output)
     

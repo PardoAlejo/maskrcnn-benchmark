@@ -127,6 +127,14 @@ class DatasetCatalog(object):
         "flc_test_negatives_leaves_cocostyle": {
             "img_dir": "flc/test/JPEGImages",
             "ann_file": "flc/test/coco_annotations/leaves_test_negs.json"
+        },
+        "flc_trainval_hards_instances_cocostyle": {
+            "img_dir": "flc/trainval/JPEGImages",
+            "ann_file": "flc/trainval/coco_annotations/instances_trainval_hard_negs.json"
+        },
+        "flc_trainval_hards_leaves_cocostyle": {
+            "img_dir": "flc/trainval/JPEGImages",
+            "ann_file": "flc/trainval/coco_annotations/leaves_trainval_hard_negs.json"
         }
     }
 
