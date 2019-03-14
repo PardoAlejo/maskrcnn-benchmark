@@ -2,7 +2,7 @@ INPUT:
   FLIP_PROB_TRAIN: 0.5
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
-  WEIGHT: ""
+  WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
   BACKBONE:
     CONV_BODY: "R-50-FPN"
   RESNETS:
