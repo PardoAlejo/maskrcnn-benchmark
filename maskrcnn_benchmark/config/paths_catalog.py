@@ -133,8 +133,8 @@ class DatasetCatalog(object):
             "ann_file": "flc/trainval/coco_annotations/instances_trainval_hard_pos.json"
         },
         "flc_test_hards_instances_cocostyle": {
-            "img_dir": "flc/trainval/JPEGImages",
-            "ann_file": "flc/trainval/coco_annotations/instances_test_hard_pos.json"
+            "img_dir": "flc/test/JPEGImages",
+            "ann_file": "flc/test/coco_annotations/instances_test_hard_pos.json"
         },
         "flc_trainval_hards_leaves_cocostyle": {
             "img_dir": "flc/trainval/JPEGImages",
