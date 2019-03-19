@@ -72,7 +72,7 @@ if __name__ == "__main__":
         default=0.8,
         help="FP threshold",
         required=False,
-        type=int,
+        type=float,
     )
 
     args = parser.parse_args()
@@ -80,5 +80,5 @@ if __name__ == "__main__":
     #ann_file = 'examples/instances_test_pos.json'
     #pred_file = 'examples/segm.json'
     #output = 'examples/instances_test_hard_negatives.json'
-    pred2hard(args.ann_file, args.pred_file, args.output)
+    pred2hard(args.ann_file, args.pred_file, args.out_file)
     
