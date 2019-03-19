@@ -10,7 +10,6 @@ from maskrcnn_benchmark.structures.bounding_box import BoxList
 from maskrcnn_benchmark.structures.boxlist_ops import boxlist_iou
 
 from maskrcnn_benchmark.config import cfg
-import ipdb
 
 def do_coco_evaluation(
     dataset,
@@ -323,7 +322,6 @@ def evaluate_predictions_on_coco(
     coco_eval.evaluate()
     coco_eval.accumulate()
     coco_eval.summarize()
-    ipdb.set_trace()
     if cfg.PER_CATEGORY_RESULTS:
         coco_eval.summarize_per_category()
     return coco_eval
