@@ -1,5 +1,7 @@
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
+from pycocotools.mask import decode
+from pycococreatortools.pycococreatortools import binary_mask_to_polygon
 import os
 import os.path as osp
 import json
@@ -32,6 +34,8 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
             if max_overlap <= fp_th:
                 num_fp += 1
                 fp = cocoDt.imgToAnns[key][i]
+                fp_segm = decode(fp['segmentation'])
+                fp['segmentations'] = binary_mask_to_polygon(fp_segm)
                 fp.pop('score')
                 fp['category_id'] = 2
                 fp['id'] += num_train_inst
