@@ -37,6 +37,8 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
             if max_overlap <= fp_th:
                 num_fp += 1
                 fp = cocoDt.imgToAnns[key][i]
+                fp['width'] = fp['segmentation']['size'][1]
+                fp['height'] = fp['segmentation']['size'][0]
                 fp_segm = decode(fp['segmentation'])
                 fp['segmentation'] = binary_mask_to_polygon(fp_segm, tolerance=2)
                 # ipdb.set_trace()
@@ -44,8 +46,6 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
                 fp['category_id'] = 2
                 fp['id'] += num_train_inst
                 fp['area'] = int(fp['area'])
-                fp['width'] = fp['segmentation']['size'][1]
-                fp['height'] = fp['segmentation']['size'][0]
                 fp['bbox'] = fp['bbox'].tolist()
                 new_anns['annotations'].append(fp)
     print('{} FPs found'.format(num_fp))
