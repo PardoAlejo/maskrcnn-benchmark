@@ -9,6 +9,7 @@ from maskrcnn_benchmark.modeling.roi_heads.mask_head.inference import Masker
 from maskrcnn_benchmark.structures.bounding_box import BoxList
 from maskrcnn_benchmark.structures.boxlist_ops import boxlist_iou
 
+import ipdb
 
 def do_coco_evaluation(
     dataset,
@@ -59,6 +60,7 @@ def do_coco_evaluation(
             res = evaluate_predictions_on_coco(
                 dataset.coco, coco_results[iou_type], file_path, iou_type
             )
+            ipdb.set_trace()
             results.update(res)
     logger.info(results)
     check_expected_results(results, expected_results, expected_results_sigma_tol)
