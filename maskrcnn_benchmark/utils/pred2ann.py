@@ -38,7 +38,8 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
                 num_fp += 1
                 fp = cocoDt.imgToAnns[key][i]
                 fp_segm = decode(fp['segmentation'])
-                fp['segmentations'] = binary_mask_to_polygon(fp_segm, tolerance=0.5)
+                fp['segmentation'] = binary_mask_to_polygon(fp_segm, tolerance=2)
+                # ipdb.set_trace()
                 fp.pop('score')
                 fp['category_id'] = 2
                 fp['id'] += num_train_inst
