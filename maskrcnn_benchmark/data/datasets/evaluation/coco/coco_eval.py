@@ -306,7 +306,7 @@ def evaluate_box_proposals(
 
 
 def evaluate_predictions_on_coco(
-    coco_gt, coco_results, json_result_file, iou_type="bbox"
+    coco_gt, coco_results, json_result_file, iou_type="bbox", cfg=cfg
 ):
     import json
 
