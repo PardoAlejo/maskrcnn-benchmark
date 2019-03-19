@@ -7,6 +7,7 @@ import os.path as osp
 import json
 import argparse
 import ipdb
+from progress.bar import Bar
 
 def pred2hard(ann_file, pred_file, output, fp_th=0.8):
     
@@ -26,8 +27,10 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
     #Find the FPs given a threshold
     print('Finding FP...')
     num_fp = 0
+    bar = Bar('Processing', len(cocoDt.imgToAnns.keys()))
     for key in cocoDt.imgToAnns.keys():
         #ipdb.set_trace()
+        bar.next()
         ious = cocoEval.ious[(key,1)]
         for i,iou in enumerate(ious):
             max_overlap = max(iou)
@@ -45,6 +48,7 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
                 fp['bbox'] = fp['bbox'].tolist()
                 new_anns['annotations'].append(fp)
     print('{} FPs found'.format(num_fp))
+    bar.finish()
     ipdb.set_trace()
     new_anns['categories'].append({'id':2, 'name': 'Three Leaf Clover', 'supercategory': 'Clover'})
     with open(output, 'w') as f:
