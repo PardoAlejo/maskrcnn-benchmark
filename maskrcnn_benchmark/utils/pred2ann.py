@@ -4,6 +4,7 @@ import os
 import os.path as osp
 import json
 import argparse
+import ipdb
 
 def pred2hard(ann_file, pred_file, output, fp_th=0.8):
     
@@ -31,15 +32,18 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
             if max_overlap <= fp_th:
                 num_fp += 1
                 fp = cocoDt.imgToAnns[key][i]
+                fp.pop('score')
                 fp['category_id'] = 2
                 fp['id'] += num_train_inst
+                fp['area'] = int(fp['area'])
                 fp['width'] = fp['segmentation']['size'][1]
                 fp['height'] = fp['segmentation']['size'][0]
+                fp['bbox'] = fp['bbox'].tolist()
                 new_anns['annotations'].append(fp)
     print('{} FPs found'.format(num_fp))
-    
+    ipdb.set_trace()
     new_anns['categories'].append({'id':2, 'name': 'Three Leaf Clover', 'supercategory': 'Clover'})
-    with open(output) as f:
+    with open(output, 'w') as f:
         json.dump(new_anns, f)
     
     print('Hard negatives annotation file saved in {}'.format(output))
