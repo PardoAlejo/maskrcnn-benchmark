@@ -31,7 +31,7 @@ MODEL:
   MASK_ON: True
 DATASETS:
   TRAIN: ("flc_trainval_hards_instances_cocostyle",)
-  TEST: ("flc_test_hards_instances_cocostyle", flc_trainval_hards_instances_cocostyle)
+  TEST: ("flc_test_hards_instances_cocostyle", "flc_trainval_hards_instances_cocostyle")
 DATALOADER:
   SIZE_DIVISIBILITY: 32
 SOLVER:
