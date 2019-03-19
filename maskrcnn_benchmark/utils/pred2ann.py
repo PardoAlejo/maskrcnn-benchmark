@@ -27,7 +27,7 @@ def pred2hard(ann_file, pred_file, output, fp_th=0.8):
     #Find the FPs given a threshold
     print('Finding FP...')
     num_fp = 0
-    bar = Bar('Processing', len(cocoDt.imgToAnns.keys()))
+    bar = Bar('Processing', max=len(cocoDt.imgToAnns.keys()))
     for key in cocoDt.imgToAnns.keys():
         #ipdb.set_trace()
         bar.next()
