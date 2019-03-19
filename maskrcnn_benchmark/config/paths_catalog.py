@@ -130,11 +130,11 @@ class DatasetCatalog(object):
         },
         "flc_trainval_hards_instances_cocostyle": {
             "img_dir": "flc/trainval/JPEGImages",
-            "ann_file": "flc/trainval/coco_annotations/instances_trainval_hard_negs.json"
+            "ann_file": "flc/trainval/coco_annotations/instances_trainval_hard_pos.json"
         },
         "flc_trainval_hards_leaves_cocostyle": {
             "img_dir": "flc/trainval/JPEGImages",
-            "ann_file": "flc/trainval/coco_annotations/leaves_trainval_hard_negs.json"
+            "ann_file": "flc/trainval/coco_annotations/leaves_trainval_hard_pos.json"
         }
     }
 
