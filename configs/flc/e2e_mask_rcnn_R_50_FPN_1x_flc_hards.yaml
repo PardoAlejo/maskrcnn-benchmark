@@ -1,6 +1,6 @@
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
-  WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
+  WEIGHT: "/home/acastillo/alejo/maskrcnn-benchmark/model_0003000.pth"
   BACKBONE:
     CONV_BODY: "R-50-FPN"
   RESNETS:
@@ -35,11 +35,11 @@ DATASETS:
 DATALOADER:
   SIZE_DIVISIBILITY: 32
 SOLVER:
-  BASE_LR: 0.005
+  BASE_LR: 0.002
   WEIGHT_DECAY: 0.0001
   STEPS: (13000, 14000)
   MAX_ITER: 15000
   IMS_PER_BATCH: 4
   CHECKPOINT_PERIOD: 1000
-OUTPUT_DIR: "output/flc_instances_003_hards_0.005"
+OUTPUT_DIR: "output/flc_instances_003_hards_finetuning"
 PER_CATEGORY_RESULTS: True
