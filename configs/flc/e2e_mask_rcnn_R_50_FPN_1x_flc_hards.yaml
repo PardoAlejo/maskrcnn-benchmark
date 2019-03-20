@@ -1,6 +1,6 @@
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
-  WEIGHT: "/home/acastillo/alejo/maskrcnn-benchmark/model_0003000.pth"
+  WEIGHT: "/home/acastillo/alejo/maskrcnn-benchmark/output/flc_instances_003/model_0003000.pth"
   BACKBONE:
     CONV_BODY: "R-50-FPN"
   RESNETS:
