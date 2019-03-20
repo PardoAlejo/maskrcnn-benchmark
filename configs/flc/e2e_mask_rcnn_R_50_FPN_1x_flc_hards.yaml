@@ -41,5 +41,5 @@ SOLVER:
   MAX_ITER: 20000
   IMS_PER_BATCH: 4
   CHECKPOINT_PERIOD: 1000
-OUTPUT_DIR: "output/flc_instances_003_hards_finetuning"
+OUTPUT_DIR: "output/flc_instances_003_hards_finetuning_longer"
 PER_CATEGORY_RESULTS: True
