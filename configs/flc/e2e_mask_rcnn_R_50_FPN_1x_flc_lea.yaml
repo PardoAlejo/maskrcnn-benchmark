@@ -31,7 +31,7 @@ MODEL:
   MASK_ON: True
 DATASETS:
   TRAIN: ("flc_train_positive_leaves_cocostyle",)
-  TEST: ("flc_test_positive_leaves_cocostyle", "flc_train_positive_leaves_cocostyle", "flc_test_complete_leaves_cocostyle")
+  TEST: ("flc_test_positive_leaves_cocostyle", "flc_train_positive_leaves_cocostyle") #, "flc_test_negatives_instances_cocostyle")
 DATALOADER:
   SIZE_DIVISIBILITY: 32
 SOLVER:
