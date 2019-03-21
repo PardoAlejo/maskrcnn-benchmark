@@ -112,7 +112,7 @@ class DatasetCatalog(object):
             "img_dir": "flc/test/JPEGImages",
             "ann_file": "flc/test/coco_annotations/instances_test_pos.json"
         },
-        "flc_test_negatives_instances_cocostyle": {
+        "flc_test_complete_instances_cocostyle": {
             "img_dir": "flc/test/JPEGImages",
             "ann_file": "flc/test/coco_annotations/instances_test_complete.json"
         },
