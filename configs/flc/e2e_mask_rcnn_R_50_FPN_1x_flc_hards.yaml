@@ -30,7 +30,7 @@ MODEL:
     SHARE_BOX_FEATURE_EXTRACTOR: False
   MASK_ON: True
 DATASETS:
-  TRAIN: ("flc_trainval_hards_complete_instances_cocostyle",)
+  TRAIN: ("flc_trainval_hard_complete_instances_cocostyle",)
   TEST: ("flc_test_hards_instances_cocostyle", "flc_trainval_hards_instances_cocostyle")
 DATALOADER:
   SIZE_DIVISIBILITY: 32
